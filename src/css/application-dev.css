@@ -1,0 +1,387 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+body {
+  font-family: "JetBrains Mono", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .container {
+    max-width: 320px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  padding: 20px 0;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .header__logo {
+    height: 22px;
+  }
+}
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .header__menu {
+    gap: 5px;
+  }
+}
+.header__menu-item {
+  height: 9px;
+  width: 82px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #6271f1, #7ffeb6);
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .header__menu-item {
+    height: 4px;
+    width: 50px;
+    border-radius: 20px;
+  }
+}
+.header__menu:hover {
+  gap: 6px;
+}
+
+#menu {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  width: 500px;
+  background-color: #3843a7;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  gap: 20px;
+  transition: all 0.2s;
+  transform: translate(500px);
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  #menu {
+    width: 340px;
+    transform: translate(340px);
+  }
+}
+#menu a {
+  font-size: 24px;
+  color: #fff;
+  transition: all 0.2s;
+}
+#menu a:hover {
+  opacity: 0.7;
+}
+#menu #menu_close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.main {
+  height: 715px;
+  background-color: #6271f1;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main {
+    padding: 20px 0;
+    height: auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__img {
+    display: none;
+  }
+}
+.main__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.main__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 580px;
+  gap: 25px;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__form {
+    gap: 20px;
+    width: 300px;
+  }
+}
+.main__form h1 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__form h1 {
+    font-size: 30px;
+  }
+}
+.main__form > input {
+  background-color: #fff;
+  color: #293176;
+  padding: 25px 18px;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 15px;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__form > input {
+    padding: 15px 10px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+}
+.main__form-select {
+  position: relative;
+  width: 100%;
+}
+.main__form-select::after {
+  content: ">";
+  display: block;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  font-size: 30px;
+  transform: rotate(90deg);
+  pointer-events: none;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__form-select::after {
+    top: 18px;
+    font-size: 20px;
+  }
+}
+.main__form select {
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  color: #293176;
+  padding: 25px 18px;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__form select {
+    padding: 15px 10px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+}
+.main__form select:active, .main__form select:focus {
+  outline: none;
+}
+.main__form select option {
+  font-size: 18px;
+  color: #293176;
+  padding: 8px;
+}
+.main__form select option:hover {
+  background-color: #6271f1;
+  color: #fff;
+}
+.main__form-checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+}
+.main__form-checkbox input {
+  accent-color: #6271f1;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__form-checkbox input {
+    gap: 5px;
+  }
+}
+.main__form-checkbox label {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__form-checkbox label {
+    font-size: 12px;
+  }
+}
+.main__form button {
+  width: 100%;
+  background-color: #69de98;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  padding: 15px 0;
+  transition: all 0.2s;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .main__form button {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+}
+.main__form button:disabled {
+  cursor: default;
+  background-color: #90b79f;
+}
+.main__form button:hover {
+  opacity: 0.9;
+}
+.main__form button:hover:disabled {
+  opacity: 1;
+}
+
+.footer {
+  padding: 40px 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .footer {
+    gap: 30px;
+    padding: 20px 0;
+  }
+}
+.footer img {
+  height: 44px;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .footer img {
+    height: 22px;
+  }
+}
+.footer p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: #9a9a9a;
+}
+@media (min-width: 320px) and (max-width: 530px) {
+  .footer p {
+    font-size: 12px;
+  }
+}

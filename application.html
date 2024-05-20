@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./dist/css/application.css" />
+        <script src="./dist/js/application.js" defer></script>
+        <title>KOCHKAGYM - Оставить заявку</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header__container">
+                <a href="/">
+                    <img src="./src/assets/logo.svg" alt="logo" class="header__logo" />
+                </a>
+                <div class="header__menu">
+                    <div class="header__menu-item"></div>
+                    <div class="header__menu-item"></div>
+                    <div class="header__menu-item"></div>
+                </div>
+            </div>
+            <div id="menu">
+                <a href="/">Главная</a>
+                <a href="/application.html">Оставить заявку</a>
+                <a href="/serveces.html">Абонементы</a>
+                <a href="" id="menu_close">X</a>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container main__container">
+                <img src="./src/assets/picture.png" alt="man" class="main__img" />
+                <form class="main__form">
+                    <h1>Оставте заявку на покупку</h1>
+                    <input type="text" placeholder="Ваше имя" id="client_name" />
+                    <input type="email" placeholder="Ваш email" id="recipient" />
+                    <div class="main__form-select">
+                        <select name="type" id="select">
+                            <option value="Месячный">Месячный</option>
+                            <option value="Годовой">Годовой</option>
+                            <option value="Годовой plus">Годовой plus</option>
+                        </select>
+                    </div>
+                    <div class="main__form-checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <label for="checkbox">Я принимаю соглашение об обработке персональных данных</label>
+                    </div>
+                    <button id="send" disabled>Оставить заявку</button>
+                </form>
+            </div>
+        </main>
+        <footer class="footer">
+            <img src="./src/assets/logo.svg" alt="logo" class="footer__logo" />
+            <p>© ИП Метлов Н. М.</p>
+        </footer>
+    </body>
+</html>

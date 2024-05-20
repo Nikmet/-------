@@ -1,0 +1,236 @@
+@import "reset";
+@import "vars";
+
+body {
+    font-family: "JetBrains Mono", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (min-width: 320px) and (max-width: 530px) {
+        max-width: 320px;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+}
+
+.header {
+    padding: 20px 0;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        @media (min-width: 320px) and (max-width: 530px) {
+            height: 22px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        transition: $transition;
+        cursor: pointer;
+
+        @media (min-width: 320px) and (max-width: 530px) {
+            gap: 5px;
+        }
+
+        &-item {
+            height: 9px;
+            width: 82px;
+            border-radius: 20px;
+            background: linear-gradient(90deg, $blue, $green);
+
+            @media (min-width: 320px) and (max-width: 530px) {
+                height: 4px;
+                width: 50px;
+                border-radius: 20px;
+            }
+        }
+
+        &:hover {
+            gap: 6px;
+        }
+    }
+}
+
+#menu {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 500px;
+    background-color: #3843a7;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    gap: 20px;
+    transition: $transition;
+    transform: translate(500px);
+
+    @media (min-width: 320px) and (max-width: 530px) {
+        width: 340px;
+        transform: translate(340px);
+    }
+
+    a {
+        font-size: 24px;
+        color: #fff;
+        transition: $transition;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    #menu_close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
+}
+
+.main {
+    height: 747px;
+    background-color: $blue;
+
+    @media (min-width: 320px) and (max-width: 530px) {
+        height: auto;
+        padding: 30px 0px;
+    }
+
+    &__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        @media (min-width: 320px) and (max-width: 530px) {
+            flex-direction: column;
+        }
+    }
+
+    &__card {
+        background-color: #fff;
+        height: 585px;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        @media (min-width: 320px) and (max-width: 530px) {
+            height: 400px;
+            padding: 20px 10px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 900;
+            color: #171c47;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+
+            &::after {
+                content: "";
+
+                margin-top: 10px;
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: $blue;
+            }
+        }
+
+        li {
+            font-size: 20px;
+            color: #171c47;
+
+            @media (min-width: 320px) and (max-width: 530px) {
+                font-size: 14px;
+            }
+        }
+
+        a {
+            position: absolute;
+            bottom: 40px;
+            width: 90%;
+            padding: 10px 0;
+            background-color: $blue;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            transition: $transition;
+
+            @media (min-width: 320px) and (max-width: 530px) {
+                bottom: 20px;
+            }
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        &-big {
+            height: 685px;
+
+            @media (min-width: 320px) and (max-width: 530px) {
+                height: 400px;
+                padding: 20px 10px;
+            }
+
+            h2 {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (min-width: 320px) and (max-width: 530px) {
+        gap: 30px;
+        padding: 20px 0;
+    }
+
+    img {
+        height: 44px;
+        @media (min-width: 320px) and (max-width: 530px) {
+            height: 22px;
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+        color: #9a9a9a;
+
+        @media (min-width: 320px) and (max-width: 530px) {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic" rel="stylesheet" />
+        <link rel="stylesheet" href="dist/css/index.css" />
+        <script src="./dist/js/index.js" defer></script>
+        <title>KOCHKAGYM - спортивный зал во Владимире</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header__container">
+                <a href="/">
+                    <img src="./src/assets/logo.svg" alt="logo" class="header__logo" />
+                </a>
+                <div class="header__menu">
+                    <div class="header__menu-item"></div>
+                    <div class="header__menu-item"></div>
+                    <div class="header__menu-item"></div>
+                </div>
+            </div>
+            <div id="menu">
+                <a href="/">Главная</a>
+                <a href="/application.html">Оставить заявку</a>
+                <a href="/serveces.html">Абонементы</a>
+                <a href="" id="menu_close">X</a>
+            </div>
+        </header>
+        <main>
+            <section class="section-one">
+                <div class="container section-one__container">
+                    <h1 class="section-one__title">КУПИ АБОНЕМЕНТ И НАЧНИ СВОЙ ПУТЬ УЖЕ СЕГОДНЯ!</h1>
+                    <div class="section-one__wrapper">
+                        <img src="./src/assets/picture.png" alt="man" class="section-one__img" />
+                        <form class="section-one__form">
+                            <input type="email" placeholder="Ваш email" id="recipient" />
+                            <div class="section-one__form-select">
+                                <select name="time" label="Срок абонемента" id="select">
+                                    <option value="1 месяц">1 месяц</option>
+                                    <option value="2 месяца">2 месяца</option>
+                                    <option value="3 месяца">3 месяца</option>
+                                    <option value="4 месяца">4 месяца</option>
+                                    <option value="5 месяцев">5 месяцев</option>
+                                    <option value="6 месяцев">6 месяцев</option>
+                                    <option value="7 месяцев">7 месяцев</option>
+                                    <option value="8 месяцев">8 месяцев</option>
+                                    <option value="9 месяцев">9 месяцев</option>
+                                    <option value="10 месяцев">10 месяцев</option>
+                                    <option value="11 месяцев">11 месяцев</option>
+                                    <option value="12 месяцев">12 месяцев</option>
+                                </select>
+                            </div>
+                            <div class="section-one__form-checkbox">
+                                <input type="checkbox" id="checkbox" />
+                                <label for="checkbox">Я принимаю соглашение об обработке персональных данных</label>
+                            </div>
+                            <button id="send" disabled>Оставить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="section-two">
+                <div class="container">
+                    <h2 class="section-two__title">НАШ СПОРТЗАЛ</h2>
+                    <div class="section-two__wrapper">
+                        <img src="./src/assets/pic1.png" alt="picture1" />
+                        <img src="./src/assets/pic2.png" alt="picture2" />
+                        <img src="./src/assets/pic3.png" alt="picture3" />
+                        <img src="./src/assets/pic4.png" alt="picture4" />
+                        <img src="./src/assets/pic6.png" alt="picture5" />
+                        <img src="./src/assets/pic5.png" alt="picture6" />
+                    </div>
+                </div>
+            </section>
+            <section class="section-three">
+                <div class="container">
+                    <h2 class="section-three__title">НАШИ ТРЕНЕРА</h2>
+                    <div class="section-three__wrapper">
+                        <div class="section-three__card">
+                            <img src="./src/assets/Kirill.png" alt="Kirill" />
+                            <h3>Кирилл</h3>
+                            <p>МС по жиму лежа</p>
+                            <a href="tel:88005553535">8(800)-555-35-35</a>
+                        </div>
+                        <div class="section-three__card">
+                            <img src="./src/assets/Anfisa.png" alt="Anfisa" />
+                            <h3>Анфиса</h3>
+                            <p>Наша принцесса</p>
+                            <a href="tel:89045252998">8(904)-525-29-98</a>
+                        </div>
+                        <div class="section-three__card">
+                            <img src="./src/assets/Artem.png" alt="Artem" />
+                            <h3>Артем</h3>
+                            <p>Бодибилдер со стажем</p>
+                            <a href="tel:89026667639">8(902)-666-76-39</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-four">
+                <div class="container">
+                    <h2 class="section-four__title">КАК НАС НАЙТИ?</h2>
+                    <div class="section-four__map">
+                        <img src="./src/assets/map.png" alt="map" />
+                    </div>
+                    <div class="section-four__info">
+                        <p>Адрес: г.Владимир, ул.Егорова, 8Б, 3 этаж</p>
+                        <p>Контактный номер: 8(903)-782-34-55</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <img src="./src/assets/logo.svg" alt="logo" class="footer__logo" />
+            <p>© ИП Метлов Н. М.</p>
+        </footer>
+    </body>
+</html>
